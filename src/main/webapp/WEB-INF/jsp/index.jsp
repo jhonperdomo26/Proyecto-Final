@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,10 +12,14 @@
   <title>Iron Body</title>
 </head>
 <body>
+    <header>
+        <%@ include file="común/header.jsp" %>
+    </header>
+    <main>
 
-<a href="/login">Iniciar sesión</a>
-
-<h1> hola mundo </h1>
-
+    </main>
+    <footer>
+        <%@ include file="común/footer.jsp" %>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,195 @@
+/* INICIO FOOTER */
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+footer{
+    background-color: black;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.footer-content{
+    width: 100%;
+    height: 60%;
+    margin: 0.25% 0%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.footer-logo{
+    width: 25%;
+    height: 100%;
+    margin: 0.25% 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.footer-logo img{
+    width: 80%;
+    height: auto;
+}
+
+.footer-logo img:hover{
+    cursor: pointer;
+    transition: 1s;
+    transform: scale(1.05);
+}
+
+.redes{
+    width: 70%;
+    height: 30%;
+    margin: 2% 0%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.img-footer-redes{
+    width: 80%;
+    height: auto;
+}
+
+.img-footer-redes:hover{
+    scale:  1.4;
+    transition: 0.75s;
+}
+
+.footer-column{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-left: #c9ab05 2px solid;
+}
+
+.derechos{
+    background-color: #e9d809;
+    width: 100%; 
+    margin: 0.5% 0%;
+    padding: 1% 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 100%;
+}
+
+ul, ul li a{
+    color: #e9d809;
+    list-style: none;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+ul li a:hover{
+    color: #c9ab05;}
+
+  @media (max-width:375px) {
+
+      footer{
+        background-color: black;
+        width: 100%;
+        height: 300px;
+        padding: 2% 0%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+      }
+
+      .derechos{
+        background-color: #817a2d;
+        width: 100%;
+        height: 10%;
+        margin: 1% 0%;
+        padding: 2% 0%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 15px;
+      }
+    }
+
+  @media (max-width:320px) {
+
+    footer{
+      background-color: black;
+      width: 100%;
+      height: 200px;
+      padding: 2% 0%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: column;
+    }
+
+    .footer-logo{
+      background-color: turquoise;
+      width: 60%;
+      height: 40%;
+      margin: 0.25% 0%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .footer-logo img{
+      width: 80%;
+      height: auto;
+    }
+  
+    .footer-logo img:hover{
+      cursor: pointer;
+      transition: 1s;
+      transform: scale(1.05);
+    }
+  
+    .redes{
+      background-color: tomato;
+      width: 50%;
+      height: 20%;
+      margin: 0.25% 0%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+  
+    .img-footer-redes{
+      width: 80%;
+      height: auto;
+    }
+  
+    .img-footer-redes:hover{
+      scale:  1.4;
+      transition: 0.75s;
+    }
+
+    .derechos{
+      background-color: #e9d809;
+      width: 100%;
+      height: 10%;
+      margin: 1% 0%;
+      padding: 2% 0%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 10px;
+    }
+  }
