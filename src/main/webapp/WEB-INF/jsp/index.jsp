@@ -13,13 +13,13 @@
 </head>
 <body>
     <header>
-        <%@ include file="común/header.jsp" %>
+      <%@ include file="común/header.jsp" %>
     </header>
     <main>
 
     </main>
     <footer>
-        <%@ include file="común/footer.jsp" %>
+      
     </footer>
 </body>
 </html>
