@@ -26,17 +26,17 @@
               <li><a href="/html/contactos.html">Contáctanos</a></li>
             </ul>
             <div class="redes">
-              <a href="#" class="btn-redes">
-                <img src="/multimedia/sgv/youtube-amarillo.svg" alt="" class="img-footer-redes">
+              <a href="https://www.youtube.com/@Ironbodyteam" target="_blank" class="btn-redes">
+                <img src="/multimedia/sgv/youtube-amarillo.svg" alt="Logo de Youtube" class="img-footer-redes">
               </a>
-              <a href="#" class="btn-redes">
-                <img src="/multimedia/sgv/instagram-amarillo.svg" alt="" class="img-footer-redes">
+              <a href="https://www.instagram.com/ironbodyneiva/" target="_blank" class="btn-redes">
+                <img src="/multimedia/sgv/instagram-amarillo.svg" alt="Logo de Instagram" class="img-footer-redes">
               </a>
-              <a href="#" class="btn-redes">
-                <img src="/multimedia/sgv/facebook-amarillo.svg" alt="" class="img-footer-redes">
+              <a href="https://www.facebook.com/ironbodyneiva" target="_blank" class="btn-redes">
+                <img src="/multimedia/sgv/facebook-amarillo.svg" alt="Logo de Facebook" class="img-footer-redes">
               </a>
-              <a href="#" class="btn-redes">
-                <img src="/multimedia/sgv/twitter-amarillo.svg" alt="" class="img-footer-redes">
+              <a href="https://api.whatsapp.com/send/?phone=573143455483&text&type=phone_number&app_absent=0" target="_blank" class="btn-redes">
+                <img src="/multimedia/sgv/whatsapp-amarillo-svgrepo-com.svg" alt="Logo de Whatsapp" class="img-footer-redes">
               </a>
             </div>
           </div>

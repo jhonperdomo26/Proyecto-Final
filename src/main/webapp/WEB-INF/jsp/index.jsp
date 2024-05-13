@@ -19,7 +19,7 @@
 
     </main>
     <footer>
-      
+      <%@ include file="común/footer.jsp" %>
     </footer>
 </body>
 </html>
