@@ -34,7 +34,7 @@
   justify-content: space-evenly;
 }
     
-.btn{
+.mi-btn{
   background-color: #e9d809;
   color: #422a06;
   border: none;
@@ -44,7 +44,7 @@
   border-radius: 4px;
 }
   
-.btn:hover{
+.mi-btn:hover{
   background-color: #c9ab05;
   cursor: pointer;
   transition: ease-out 0.3s;
@@ -115,7 +115,7 @@
 
 /* DROPDOWN */
 
-.dropdown-menu{
+.mi-dropdown-menu{
   display: none;
   position: absolute;
   right: 10%;
@@ -129,11 +129,11 @@
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.dropdown-menu.open{
-  height: 400px;
+.mi-dropdown-menu.open{
+  height: 380px;
 }
 
-.dropdown-menu ul li a{
+.mi-dropdown-menu ul li a{
   color: black;
   font-weight: bold;
   padding: 0.7rem;
@@ -144,8 +144,7 @@
   text-decoration: none;
 }
 
-.dropdown-menu ul li a:hover{
-  /* color: #c9ab05; */
+.mi-dropdown-menu ul li a:hover{
   cursor: pointer;
   transition: 0.5s;
   background-color: rgba(233, 216, 9, 0.5);  
@@ -179,7 +178,7 @@
       justify-content: space-evenly;
     }
 
-    .btn{
+    .mi-btn{
       background-color: #e9d809;
       color: #422a06;
       border: none;
@@ -263,7 +262,7 @@
       cursor: pointer;
     }
 
-    .btn-menu{
+    .mi-btn-menu{
       background-color: #f9f225;
       width: 10%;
       height: 100%;
@@ -274,17 +273,37 @@
       border: none;
     }
 
-    .btn-menu img{
+    .mi-btn-menu img{
       width: 30%;
       height: auto;
       cursor: pointer;
     }
 
-    .dropdown-menu{
-      display: block;
+    .mi-dropdown-menu{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
     }
 
-    .drop-inicio-sesion{
+    .mi-dropdown-menu li{
+      list-style: none;
+      width: 100%;
+      height: auto;
+    }
+
+    .mi-dropdown-menu ul{
+      width: 100%;
+      height: auto;
+      padding: 0%;
+      margin: 0%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .mi-drop-inicio-sesion{
       background-color: black;
       width: 100%;
       height: 20%;
@@ -294,13 +313,13 @@
       flex-direction: row;
     }
 
-    .drop-inicio-sesion img{
+    .mi-drop-inicio-sesion img{
       width: 22%;
       height: auto;
       cursor: pointer;
     }
 
-    .drop-btn-inicio{
+    .mi-drop-btn-inicio{
       background-color: transparent;
       color: #f9f225;
       font-size: 20px;
@@ -309,7 +328,7 @@
       border: none;
     }
 
-    .drop-btn-inicio:hover{
+    .mi-drop-btn-inicio:hover{
       color: #c9ab05;
       cursor: pointer;
       transition: 0.5s;
