@@ -236,7 +236,7 @@ footer{
       border: none;
     }
 
-    ul, ul li a{
+    /* ul, ul li a{
     color: #e9d809;
     list-style: none;
     text-decoration: none;
@@ -246,7 +246,7 @@ footer{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    }
+    } */
 
     .redes{
       width: 70%;
@@ -316,7 +316,7 @@ footer{
       color: #e9d809;
       text-decoration: none;
       font-weight: bold;
-      font-size: 80%;
+      font-size: 100%;
     }
 
     .redes{

@@ -19,7 +19,7 @@
 
       <div class="content">
         <div class="parrafo">
-          <span>TRANSFORMA TU <br>
+          <span class="fw-bold">TRANSFORMA TU <br>
             CUERPO
           </span>
   
@@ -101,11 +101,11 @@
         </div>
       </div>
 
-      <div class="container-fluid mb-2 mt-2">
+      <div class="container-fluid mb-4 mt-4">
         <div class="row g-3">
           <!-- Tarjeta 1 -->
-          <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
-            <div class="card" style="width: 18rem;">
+          <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center mb-2 mt-2">
+            <div class="card shadow trjt" style="width: 18rem;">
               <img src="/multimedia/img/aoe_medical_services-500x0-c-default.jpg" class="card-img-top" alt="Imagen sobre servicios médicos">
               <div class="card-body">
                 <h5 class="card-title fw-bold">
@@ -116,8 +116,8 @@
             </div>
           </div>
           <!-- Tarjeta 2 -->
-          <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
-            <div class="card" style="width: 18rem;">
+          <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center mb-2 mt-2">
+            <div class="card shadow trjt" style="width: 18rem;">
               <img src="/multimedia/img/piscina.jpg" class="card-img-top" alt="Imagen de una piscina">
               <div class="card-body">
                 <h5 class="card-title fw-bold">
@@ -128,8 +128,8 @@
             </div>
           </div>
           <!-- Tarjeta 3 -->
-          <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
-            <div class="card" style="width: 18rem;">
+          <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center mb-2 mt-2">
+            <div class="card shadow trjt" style="width: 18rem;">
               <img src="/multimedia/img/clasess.jpg" class="card-img-top" alt="Imagen sobre clases">
               <div class="card-body">
                 <h5 class="card-title fw-bold">
@@ -140,8 +140,8 @@
             </div>
           </div>
           <!-- Tarjeta 4 -->
-          <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
-            <div class="card" style="width: 18rem;">
+          <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center mb-2 mt-2">
+            <div class="card shadow trjt" style="width: 18rem;">
               <img src="/multimedia/img/tiendaa.jpeg"" class="card-img-top" alt="Imagen sobre la tienda del gimnasio">
               <div class="card-body">
                 <h5 class="card-title fw-bold">
@@ -152,8 +152,8 @@
             </div>
           </div>
           <!-- Tarjeta 5 -->
-          <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
-            <div class="card" style="width: 18rem;">
+          <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center mb-2 mt-2">
+            <div class="card shadow trjt" style="width: 18rem;">
               <img src="/multimedia/img/cafeteria.jpg" class="card-img-top" alt="Imagen sobre la cafetería">
               <div class="card-body">
                 <h5 class="card-title fw-bold">
@@ -164,8 +164,8 @@
             </div>
           </div>
           <!-- Tarjeta 6 -->
-          <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
-            <div class="card" style="width: 18rem;">
+          <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center mb-2 mt-2">
+            <div class="card shadow trjt" style="width: 18rem;">
               <img src="/multimedia/img/pesasarea.jpg" class="card-img-top" alt="Imagen sobre el área de pesas">
               <div class="card-body">
                 <h5 class="card-title fw-bold">
@@ -177,6 +177,128 @@
           </div>
         </div>
       </div>
+
+      <section class="content2 py-5">
+        <div class="container">
+          <div class="text-center mb-5 mi-titulo fs-2 p-4 shadow-lg">
+            <span class="fw-bold">
+              ENCUENTRA UN PLAN PERFECTO
+            </span>
+          </div>
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <!-- Tarjeta 1 -->
+            <div class="col">
+              <div class="card h-100 bg-transparent border-0">
+                <div class="card-body text-center mi-tarjeta text-light trjt">
+                  <h5 class="card-title fw-bold">PLAN BÁSICO</h5>
+                  <hr>
+                  <p class="card-text"><span class="h4">$60.000 COP</span></p>
+                  <ul class="list-unstyled">
+                    <li>Servicio de salud</li>
+                    <li>Servicio de piscina</li>
+                    <li>Área de entrenamiento</li>
+                  </ul>
+                  <a href="#" class="btn btn-outline-light mt-3">Adquirir plan</a>
+                </div>
+              </div>
+            </div>
+            <!-- Tarjeta 2 -->
+            <div class="col">
+              <div class="card h-100 bg-transparent border-0">
+                <div class="card-body text-center mi-tarjeta text-light trjt">
+                  <h5 class="card-title fw-bold">PLAN ESTÁNDAR</h5>
+                  <hr>
+                  <p class="card-text"><span class="h4">$70.000 COP</span></p>
+                  <ul class="list-unstyled">
+                    <li>Servicio de salud</li>
+                    <li>Servicio de piscina</li>
+                    <li>Área de entrenamiento</li>
+                    <li>Servicio de clases de fitness</li>
+                  </ul>
+                  <a href="#" class="btn btn-outline-light mt-3">Adquirir plan</a>
+                </div>
+              </div>
+            </div>
+            <!-- Tarjeta 3 -->
+            <div class="col ">
+              <div class="card h-100 bg-transparent border-0">
+                <div class="card-body text-center mi-tarjeta text-light trjt">
+                  <h5 class="card-title fw-bold">PLAN PREMIUM</h5>
+                  <hr>
+                  <p class="card-text"><span class="h4">$80.000 COP</span></p>
+                  <ul class="list-unstyled">
+                    <li>Servicio de salud</li>
+                    <li>Servicio de piscina</li>
+                    <li>Área de entrenamiento</li>
+                    <li>Servicio Clases de fitness</li>
+                    <li>Llevar a 5 amigos</li>
+                  </ul>
+                  <a href="#" class="btn btn-outline-light mt-3">Adquirir plan</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5 bg-body-tertiary">
+        <div class="container">
+          <div class="row">
+            <!-- Formulario de IMC -->
+            <div class="col-12 col-lg-6 mb-4">
+              <div class="contenido5 p-4 border rounded shadow">
+                <span class="tituloform fs-4 fs-md-3 fs-lg-2">Calculadora de IMC</span>
+                <form id="imcForm">
+                  <div class="mb-3">
+                    <label for="peso" class="form-label">Peso (kg):</label>
+                    <input type="number" id="peso" class="form-control" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="altura" class="form-label">Altura (m):</label>
+                    <input type="number" id="altura" class="form-control" required>
+                  </div>
+                  <button type="button" onclick="calcularIMC()" class="mi-btn-2">Calcular IMC</button>
+                </form>
+                <div class="mt-3">
+                  <span>Su IMC es: <span id="resultadoIMC"></span></span>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Tabla de clasificación de IMC -->
+            <div class="col-12 col-lg-6 d-flex align-items-center justify-content-center">
+              <div>
+                <table class="table border-black border-2 rounded table-bordered table-hover shadow fs-5">
+                  <thead class="table-dark border-black">
+                    <tr>
+                      <th>Índice de Masa Corporal (IMC)</th>
+                      <th>Clasificación</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Menos de 18,5</td>
+                      <td>Bajo peso</td>
+                    </tr>
+                    <tr>
+                      <td>18,5 - 24,9</td>
+                      <td>Saludable</td>
+                    </tr>
+                    <tr>
+                      <td>25,0 - 29,9</td>
+                      <td>Exceso de peso</td>
+                    </tr>
+                    <tr>
+                      <td>30,0 y superior</td>
+                      <td>Obeso</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>

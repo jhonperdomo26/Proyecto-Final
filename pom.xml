@@ -8,11 +8,11 @@
 		<version>3.2.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.titanitlift</groupId>
-	<artifactId>titanic-lift-web</artifactId>
+	<groupId>com.ironbody</groupId>
+	<artifactId>iron-body</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>titanic-lift-web</name>
+	<name>iron-body</name>
 	<description>Web project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
@@ -70,13 +70,6 @@
 			<version>11.0.0-M19</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/jakarta.servlet/jakarta.servlet-api -->
-		<dependency>
-			<groupId>jakarta.servlet</groupId>
-			<artifactId>jakarta.servlet-api</artifactId>
-			<version>6.0.0</version>
-			<scope>provided</scope>
-		</dependency>
 	</dependencies>
 
 	<build>

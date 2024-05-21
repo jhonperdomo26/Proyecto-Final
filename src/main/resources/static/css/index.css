@@ -80,33 +80,27 @@
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.75);
   }
   
-  .contenido3{
-    background-image: url('../multimedia/img/portada2.jpg');
+  .content2{
+    width: 100%;
+    height: auto;
+    background-image: url("/multimedia/img/portada2.webp");
     background-size: 100% auto;
+    background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
   }
-  
-  .plan{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    padding: 1%;
-    font-weight: bold;
+
+  .mi-titulo{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
   }
-  
-  .plan span{
-    background-color: #0000006b;
-    font-size: 40px;
-    padding: 1.5%;
-  }
-  
-  .tarjetas{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 2%;
-    padding-bottom: 6%;
+
+  .mi-tarjeta{
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
   }
   
   .tarjeta {
@@ -170,80 +164,68 @@
     box-shadow: inset 400px 0 0 0 white;
     color: #3f638b;
   }
-  
-  .section5{
-    display: flex;
-    flex-direction: row;
-    background-color: #071f3c;
+
+  .trjt:hover{
+    transform: translateY(-12px);
+    transition: 0.75s;
+  }
+
+  .tituloform {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .mi-btn-2{
+    background-color: #c9ad05;
+    color: #422a06;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 4px;
+  }
+    
+  .mi-btn-2:hover{
+    background-color: #a07d08;
+    cursor: pointer;
+    transition: ease-out 0.3s;
   }
   
-  .contenido52{
+  /* .section5{
+    display: flex;
+    flex-direction: row;
+    background-color: #e6d809;
+  } */
+  
+  /* .contenido52{
     display: flex;
     width: 50%;
     align-items: center;
     justify-content: center;
-  }
+  } */
   
-  table {
+  /* table {
     border-collapse: collapse;
     color: #fff;
     width: 70%;
     margin: 20px auto;
-  }
+  } */
   
-  th, td {
+  /* th, td {
     border: 1px solid #dddddd;
     font-size: 25px;
     text-align: left;
     padding: 8px;
-  }
+  } */
   
-  th {
+  /* th {
     background-color: rgb(83, 132, 204);
-  }
+  } */
   
   .contenido5{
-    margin: 0;
-    width: 55%;
-    background-color: rgb(42, 99, 185);
-    color: #fff;
-    font-size: 45px;
-    padding: 3%;
+    background-color: #e6d809;
   }
-  
-  input {
-    font-size: 30px;
-    color: #fff;
-    padding: 5px;
-    background-color: rgb(42, 99, 185);
-    margin: 5px;
-    border: none;
-    border-bottom: 2px solid #fff; 
-    outline: none; 
-  }
-  
-  .buttonform{
-    color: #ffffff;
-    border: 2px solid #fff; 
-    border-radius: 0px;
-    padding: 18px 36px;
-    display: inline-block;
-    font-family: "Lucida Console", Monaco, monospace;
-    font-size: 30px;
-    cursor: pointer;
-    background-color: #114078;
-    box-shadow: inset 0 0 0 0 white;
-    -webkit-transition: ease-out 0.4s;
-    -moz-transition: ease-out 0.4s;
-    transition: ease-out 0.4s;
-    margin-bottom: 10%;
-  }
-  
-  .buttonform:hover {
-    box-shadow: inset 400px 0 0 0 white;
-    color: #3f638b;
-  }
-  
   
   .tarjetaspersona{
     display: flex;
@@ -347,6 +329,7 @@
   }
 
   @media(max-width:768px){
+
     .content{
       height: 500px;
     }
@@ -357,11 +340,14 @@
       border-radius: 10px;
       box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.75);
     }
+
   }
 
   @media(max-width:576px){
+
     .content{
       height: 400px;
+      font-size: 150%;
     }
 
     .mi-img{
@@ -371,4 +357,51 @@
       border-radius: 10px;
       box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.75);
     }
+
+    .button {
+      padding: 10px 25px;
+      font-size: 12px;
+    }
+
+  }
+
+  @media(max-width:426px){
+    .content{
+      height: 300px;
+      font-size: 100%;
+    }
+
+    .button {
+      padding: 10px 20px;
+      font-size: 10px;
+    }
+
+  }
+
+  @media(max-width:375px){
+
+    .content{
+      height: 275px;
+      font-size: 100%;
+    }
+
+    .button {
+      padding: 10px 20px;
+      font-size: 10px;
+    }
+
+  }
+
+  @media(max-width:320px){
+
+    .content{
+      height: 225px;
+      font-size: 75%;
+    }
+
+    .button {
+      padding: 8px 15px;
+      font-size: 8px;
+    }
+    
   }
