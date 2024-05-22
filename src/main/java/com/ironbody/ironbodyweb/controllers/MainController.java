@@ -7,6 +7,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.security.Principal;
@@ -39,7 +40,10 @@ public class MainController {
 
 
     @GetMapping("/contacto")
-    public String contacto() { return "contacto"; }
+    public String Contacto() { return "contacto"; }
+
+    @GetMapping("/inicio-sesion")
+    public String Login() { return "inicio-sesion"; }
 
     @GetMapping("home")
     public String tuMetodo(Model model, Principal principal) {

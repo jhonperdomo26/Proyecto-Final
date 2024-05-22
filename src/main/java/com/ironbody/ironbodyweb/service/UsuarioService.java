@@ -1,66 +1,37 @@
 package com.ironbody.ironbodyweb.service;
 
-
-import java.util.List;
-
-import com.ironbody.ironbodyweb.dto.UsuarioRegistroDTO;
+import com.ironbody.ironbodyweb.model.Rol;
 import com.ironbody.ironbodyweb.model.Usuario;
+import com.ironbody.ironbodyweb.repository.UsuarioRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
 
-/**
- * Interfaz de servicio para operaciones relacionadas con la entidad Usuario.
- */
+import java.util.Collection;
+import java.util.stream.Collectors;
 
-public interface UsuarioService extends UserDetailsService{
+@Service
+public class UsuarioService implements UserDetailsService {
 
-    /**
-     * Guarda un nuevo usuario a partir de la información proporcionada en el DTO de registro.
-     *
-     * @param registroDTO El DTO que contiene la información del nuevo usuario.
-     * @return El usuario guardado.
-     */
+    @Autowired
+    private UsuarioRepository usuarioRepository;
 
-    public Usuario save(UsuarioRegistroDTO registroDTO);
+    @Override
+    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+        Usuario usuario = usuarioRepository.findByEmail(email)
+                .orElseThrow(() -> new UsernameNotFoundException("Usuario no encontrado con email: " + email));
+        return new org.springframework.security.core.userdetails.User(
+                usuario.getEmail(),
+                usuario.getPassword(),
+                mapRolesToAuthorities(usuario.getRoles())
+        );
+    }
 
-    /**
-     * Obtiene una lista de todos los usuarios.
-     *
-     * @return La lista de todos los usuarios.
-     */
-
-    public List<Usuario> listarUsuarios();
-
-    /**
-     * Elimina un usuario por su ID.
-     *
-     * @param id El ID del usuario a eliminar.
-     */
-
-    void eliminarUsuario(Long id);
-
-    /**
-     * Obtiene un usuario por su ID.
-     *
-     * @param id El ID del usuario a obtener.
-     * @return El usuario encontrado o null si no se encuentra.
-     */
-
-    Usuario obtenerUsuarioPorId(Long id);
-
-    /**
-     * Actualiza la información de un usuario.
-     *
-     * @param usuario El usuario con la información actualizada.
-     */
-
-    void actualizarUsuario(Usuario usuario);
-
-    /**
-     * Obtiene un usuario por su dirección de correo electrónico.
-     *
-     * @param email La dirección de correo electrónico del usuario a buscar.
-     * @return El usuario encontrado o null si no se encuentra.
-     */
-
-    Usuario obtenerUsuarioPorEmail(String email);
+    private Collection<? extends GrantedAuthority> mapRolesToAuthorities(Collection<Rol> roles) {
+        return roles.stream().map(role -> new SimpleGrantedAuthority(role.getNombre())).collect(Collectors.toList());
+    }
 }

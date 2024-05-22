@@ -7,7 +7,7 @@
 </head>
 <body>
     <h2>Login</h2>
-    <form method="post" action="<c:url value='/perform_login' />">
+    <form method="post" action="/login">
         <div>
             <label for="username">Username:</label>
             <input type="text" id="username" name="username"/>

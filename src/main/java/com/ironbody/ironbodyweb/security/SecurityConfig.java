@@ -12,6 +12,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.LogoutConfigurer;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
@@ -24,11 +25,8 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity
 public class SecurityConfig {
 
-    // Inyección "floja" de usuarioService
-
     @Autowired
-    @Lazy
-    private UsuarioService usuarioService;
+    private UserDetailsService userDetailsService;
 
     // Codificador de contraseñas
 
@@ -42,7 +40,7 @@ public class SecurityConfig {
     @Bean
     public DaoAuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider auth = new DaoAuthenticationProvider();
-        auth.setUserDetailsService(usuarioService);
+        auth.setUserDetailsService(userDetailsService);
         auth.setPasswordEncoder(passwordEncoder());
         return auth;
     }
@@ -70,9 +68,7 @@ public class SecurityConfig {
 
                 )
                 .formLogin(login -> login
-                        .loginPage("/login")
                         .defaultSuccessUrl("/home", true)
-                        .permitAll()
                 )
                 .logout(logout -> logout
                         .logoutUrl("/logout") // Especifica la URL de cierre de sesión
