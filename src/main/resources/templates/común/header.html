@@ -1,104 +1,105 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<html xmlns:th="http://www.thymeleaf.org" th:lang="${#locale.language}">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link th:href="@{/css-bootstrap/bootstrap.min.css}" rel="stylesheet">
-        <link th:href="q{/css-común/css-header.css}" rel="stylesheet">
+        <link th:href="@{/css-común/css-header.css}" rel="stylesheet">
+        <script th:src="@{/js-bootstrap/bootstrap.bundle.min.js}"></script>
         <script th:src="@{/js/colapso.js}"></script>
-        <link th:href="@{https://fonts.googleapis.com/css2?family=Concert+One&family=Dekko&family=Dosis:wght@200&family=Edu+NSW+ACT+Foundation:wght@400;500&family=Exo:ital,wght@1,100;1,200&family=Patrick+Hand&family=Pixelify+Sans&family=Red+Hat+Display:wght@300&family=Source+Sans+3:wght@200;300&display=swap}" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Dekko&family=Dosis:wght@200&family=Edu+NSW+ACT+Foundation:wght@400;500&family=Exo:ital,wght@1,100;1,200&family=Patrick+Hand&family=Pixelify+Sans&family=Red+Hat+Display:wght@300&family=Source+Sans+3:wght@200;300&display=swap" rel="stylesheet">
     </head>
     <body>
       <header class="menu" id="inicio">
-
           <img th:src="@{/multimedia/img/logo2.png}" class="logo">
-
           <div class="menu-buttons">
-
             <a th:href="@{/inicio}">
-              <button class="mi-btn">INICIO</button>
-            </a>
-            <a th:href="@{/tienda}">
-              <button class="mi-btn">TIENDA</button>
-            </a>
-            <a th:href="@{/clases}">
-              <button class="mi-btn">CLASES</button>
+              <button class="mi-btn" th:text="#{inicio.text}"></button>
             </a>
             <a th:href="@{/sobre_nosotros}">
-              <button class="mi-btn">SOBRE NOSOTROS</button>
+              <button class="mi-btn" th:text="#{sobre.nosotros}"></button>
             </a>
             <a th:href="@{/contacto}">
-              <button class="mi-btn">CONTÁCTENOS</button>
+              <button class="mi-btn" th:text="#{contacto}"></button>
             </a>
-
           </div>
-
+          <div class="dropdown mx-2">
+            <button class="btn btn-outline-warning dropdown-toggle fs-5" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-globe"></i> [[#{navbar.idioma}]]
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end fs-5" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" th:href="@{?lang=es}">[[#{navbar.espanol}]]</a></li>
+                <li><a class="dropdown-item" th:href="@{?lang=en}">[[#{navbar.ingles}]]</a></li>
+                <li><a class="dropdown-item" th:href="@{?lang=pt_BR}">[[#{navbar.brasileño}]]</a></li>
+                <li><a class="dropdown-item" th:href="@{?lang=ru}">[[#{navbar.ruso}]]</a></li>
+            </ul>
+          </div>
           <div class="inicio-sesion">
             <img th:src="@{/multimedia/sgv/usu-inicio.svg}" alt="logo inicio sesión">
             <a tH:href="@{/login}">
-              <button class="btn-inicio">Iniciar Sesión</button>
+              <button class="btn-inicio" th:text="#{iniciar.sesion}"></button>
             </a>
           </div>
-
           <div class="enlaces-redes">
             <a th:href="@{https://www.youtube.com/@Ironbodyteam}" target="_blank" class="btn-redes">
-              <img src="/multimedia/sgv/youtube.svg" alt="Logo de Youtube" class="img-redes">
+              <img th:src="@{/multimedia/sgv/youtube.svg}" alt="Logo de Youtube" class="img-redes">
             </a>
-            <a href="https://www.instagram.com/ironbodyneiva/" target="_blank" class="btn-redes">
-              <img src="/multimedia/sgv/instagram.svg" alt="Logo de Instagram" class="img-redes">
+            <a th:href="@{https://www.instagram.com/ironbodyneiva/}" target="_blank" class="btn-redes">
+              <img th:src="@{/multimedia/sgv/instagram.svg}" alt="Logo de Instagram" class="img-redes">
             </a>
             <a href="https://www.facebook.com/ironbodyneiva" target="_blank" class="btn-redes">
-              <img src="/multimedia/sgv/facebook.svg" alt="Logo de Facebook" class="img-redes">
+              <img th:src="@{/multimedia/sgv/facebook.svg}" alt="Logo de Facebook" class="img-redes">
             </a>
-            <a href="https://api.whatsapp.com/send/?phone=573143455483&text&type=phone_number&app_absent=0" target="_blank" class="btn-redes">
-              <img src="/multimedia/sgv/whatsapp-svgrepo-com.svg" alt="Logo de Whatsapp" class="img-redes">
+            <a th:href="@{https://api.whatsapp.com/send/?phone=573143455483&text&type=phone_number&app_absent=0}" target="_blank" class="btn-redes">
+              <img th:src="@{/multimedia/sgv/whatsapp-svgrepo-com.svg}" alt="Logo de Whatsapp" class="img-redes">
             </a>
           </div>
         </header>
-
         <header>
           <nav class="menu2">
-            <img src="/multimedia/img/logo2.png" class="logo">
-
+            <img th:src="@{/multimedia/img/logo2.png}" class="logo">
+            <div class="dropdown mx-2 fs-6">
+              <button class="btn btn-outline-warning dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="bi bi-globe"></i> [[#{navbar.idioma}]]
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                  <li><a class="dropdown-item" th:href="@{?lang=es}">[[#{navbar.espanol}]]</a></li>
+                  <li><a class="dropdown-item" th:href="@{?lang=en}">[[#{navbar.ingles}]]</a></li>
+                  <li><a class="dropdown-item" th:href="@{?lang=pt_BR}">[[#{navbar.brasileño}]]</a></li>
+                  <li><a class="dropdown-item" th:href="@{?lang=ru}">[[#{navbar.ruso}]]</a></li>
+              </ul>
+            </div>
             <button class="mi-btn-menu">
-                <img src="/multimedia/sgv/menu-svgrepo-com.svg" alt="imagen menu">
+                <img th:src="@{/multimedia/sgv/menu-svgrepo-com.svg}" alt="imagen menu">
             </button>
-
           </nav>
-
-          <div class="mi-dropdown-menu">
+          <div class="mi-dropdown-menu shadow-lg fs-6">
             <ul>
-              <li><a href="/inicio">INICIO</a></li>
-              <li><a href="/tienda">TIENDA</a></li>
-              <li><a href="/clases">CLASES</a></li>
-              <li><a href="/sobre_nosotros">SOBRE NOSOTROS</a></li>
-              <li><a href="/contacto">CONTÁCTENOS</a></li>
+              <li><a th:href="@{/inicio}" th:text="#{inicio.text}"></a></li>
+              <li><a th:href="@{/sobre_nosotros}" th:text="#{sobre.nosotros}"></a></li>
+              <li><a th:href="@{/contacto}" th:text="#{contacto}"></a></li>
             </ul>
-
             <div class="mi-drop-inicio-sesion">
-              <img src="/multimedia/sgv/usu-inicio.svg" alt="logo inicio sesión">
-              <a href="/html/inicio-sesion.html">
-                <button class="mi-drop-btn-inicio">Iniciar Sesión</button>
+              <img th:src="@{/multimedia/sgv/usu-inicio.svg}" alt="logo inicio sesión">
+              <a th:href="@{/login}">
+                <button class="mi-drop-btn-inicio" th:text="#{iniciar.sesion}"></button>
               </a>
             </div>
-
             <div class="drop-enlaces-redes">
               <a href="https://www.youtube.com/@Ironbodyteam" target="_blank" class="drop-btn-redes">
-                <img src="/multimedia/sgv/youtube.svg" alt="Logo de Youtube" class="img-redes">
+                <img th:src="@{/multimedia/sgv/youtube.svg}" alt="Logo de Youtube" class="img-redes">
               </a>
               <a href="https://www.instagram.com/ironbodyneiva/" target="_blank" class="drop-btn-redes">
-                <img src="/multimedia/sgv/instagram.svg" alt="Logo de Instagram" class="img-redes">
+                <img th:src="@{/multimedia/sgv/instagram.svg}" alt="Logo de Instagram" class="img-redes">
               </a>
               <a href="https://www.facebook.com/ironbodyneiva" target="_blank" class="drop-btn-redes">
-                <img src="/multimedia/sgv/facebook.svg" alt="Logo de Facebook" class="img-redes">
+                <img th:src="@{/multimedia/sgv/facebook.svg}" alt="Logo de Facebook" class="img-redes">
               </a>
               <a href="https://api.whatsapp.com/send/?phone=573143455483&text&type=phone_number&app_absent=0" target="_blank" class="drop-btn-redes">
-                <img src="/multimedia/sgv/whatsapp-svgrepo-com.svg" alt="Logo de Whatsapp" class="img-redes">
+                <img th:src="@{/multimedia/sgv/whatsapp-svgrepo-com.svg}" alt="Logo de Whatsapp" class="img-redes">
               </a>
             </div>
-
           </div>
-
         </header>
     </body>
 </html>

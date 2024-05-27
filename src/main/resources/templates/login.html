@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:lang="${#locale.language}">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{ti.iron.login}"></title>
+    <link th:href="@{/css-bootstrap/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/css/login.css}" rel="stylesheet">
+    <script th:src="@{/js-bootstrap/bootstrap.bundle.min.js}"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Dekko&family=Dosis:wght@200&family=Edu+NSW+ACT+Foundation:wght@400;500&family=Exo:ital,wght@1,100;1,200&family=Patrick+Hand&family=Pixelify+Sans&family=Red+Hat+Display:wght@300&family=Source+Sans+3:wght@200;300&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <div class="container-fluid">
+        <div class="row justify-content-end my-3">
+            <div class="col-auto">
+                <div class="dropdown">
+                    <button class="btn btn-warning dropdown-toggle fs-4" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-globe"></i> [[#{navbar.idioma}]]
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-lg" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item fs-4" th:href="@{?lang=es}">[[#{navbar.espanol}]]</a></li>
+                        <li><a class="dropdown-item fs-4" th:href="@{?lang=en}">[[#{navbar.ingles}]]</a></li>
+                        <li><a class="dropdown-item fs-4" th:href="@{?lang=pt_BR}">[[#{navbar.brasileño}]]</a></li>
+                        <li><a class="dropdown-item fs-4" th:href="@{?lang=ru}">[[#{navbar.ruso}]]</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mb-3">
+            <div class="col-12 text-center">
+                <div class="btn-wrapper">
+                    <a class="btn btn-warning me-2 mb-2 fs-4" th:href="@{/registro}" th:text="#{registrarse}"></a>
+                    <a class="btn btn-warning me-2 mb-2 fs-4" th:href="@{/inicio}" th:text="#{regresar}"></a>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-4">
+                <div class="form form--login p-4 border rounded shadow-lg">
+                    <div class="form--heading text-center mb-4 fs-4 fw-bold" th:text="#{bienvenido}"></div>
+                    <form autocomplete="off" th:action="@{/login}" method="post">
+                        <div class="alert alert-danger text-center fs-4" th:if="${param.error}" th:text="#{no.crede}"></div>
+                        <div class="alert alert-success text-center fs-4" th:if="${param.logout}" th:text="#{sesion.cerrada}"></div>
+                        <div class="mb-3 fs-4">
+                            <input name="username" type="email" id="email" class="form-control" required th:placeholder="#{correo.electronico}">
+                        </div>
+                        <div class="mb-3 fs-4">
+                            <input name="password" type="password" id="password" class="form-control" required th:placeholder="#{contrasena}">
+                        </div>
+                        <button type="submit" class="btn btn-warning w-100 fs-4" th:text="#{ingresar}"></button>
+                    </form>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </main>
+</body>
+</html>

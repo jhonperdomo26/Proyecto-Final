@@ -1,0 +1,8 @@
+com.ironbody.ironbodyweb
+com.ironbody.ironbodyweb.config
+com.ironbody.ironbodyweb.controllers
+com.ironbody.ironbodyweb.dto
+com.ironbody.ironbodyweb.i18n
+com.ironbody.ironbodyweb.model
+com.ironbody.ironbodyweb.repository
+com.ironbody.ironbodyweb.service

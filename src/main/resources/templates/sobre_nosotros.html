@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:lang="${#locale.language}">
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title th:text="#{ti.iron.sobrenosotros}"></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link th:href="@{/css-bootstrap/bootstrap.min.css}" rel="stylesheet">
+  <link th:href="@{/css/sobrenosotros.css}" rel="stylesheet">
+  <script th:src="@{/js/ocultar.js}"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Dekko&family=Dosis:wght@200&family=Edu+NSW+ACT+Foundation:wght@400;500&family=Exo:ital,wght@1,100;1,200&family=Patrick+Hand&family=Pixelify+Sans&family=Red+Hat+Display:wght@300&family=Source+Sans+3:wght@200;300&display=swap" rel="stylesheet">
+  <title>Iron Body</title>
+</head>
+<body>
+    <header th:insert="común/header"></header>
+    <main>
+      <div class="content">
+        <div>
+          <span class="fw-bold text-white mi-margen" th:text="#{sobre.nosotros}"></span>
+        </div>
+      </div>
+      <div class="container-fluid text-black py-2">
+        <div class="container-fluid text-center">
+          <span class="fs-2 fw-bold" th:text="#{quienes.somos}"></span>
+          <hr>
+        </div>
+      </div>
+
+      <div class="container-fluid align-items-center my-2"> 
+        <div class="row">
+          <div class="container-fluid col-md-6 py-2 d-flex align-items-center justify-content-center">
+            <div class="imagen">
+              <img th:src="@{/multimedia/img/sobrenosotrosimg1}" class="img-fluid rounded shadow-lg" width="500px" alt="Sobre Nosotros">
+            </div>
+          </div>
+
+          <div class="col-md-6 d-flex align-items-center justify-content-center">
+            <div class="container-fluid my-2">
+              <span class="fs-3" th:text="#{más.gimnasio}"></span>
+            </div>
+          </div>   
+        </div>
+      </div>
+
+      <div class="container-fluid text-center bg-black text-white">
+        <div class="row">
+          <div class="col py-2">
+            <span class="fs-2 fw-bold d-xxl-flex d-xl-flex d-lg-flex d-none align-items-center justify-content-center" th:text="#{mi.objetivo}"></span>
+            <span class="fs-4 fw-bold d-flex d-lg-none align-items-center justify-content-center" th:text="#{mi.objetivo}"></span>
+          </div>
+        </div>
+      </div>      
+      <div class="d-flex flex-column align-items-center justify-content-evenly bg-body-secondary container-fluid text-black py-2">
+        <div class="container-fluid text-center">
+          <span class="fs-2 fw-bold" th:text="#{nuestra.historia}"></span>
+          <hr>
+        </div>
+        <div class="fs-3 text-center" th:text="#{fundado}">
+        </div>
+        <div class="my-2">
+          <img th:src="@{/multimedia/img/dentro.jpg}" class="img-fluid rounded shadow-lg" alt="Dentro del Gimnasio" width="800px">
+        </div>
+      </div>
+      <section class="container-fluid bg-black text-white py-4">
+        <div class="row text-center">
+          <div class="col-12 mb-4">
+            <span class="fs-2 fw-bold" th:text="#{valores}"></span>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 mb-4 mi-img-valores">
+            <div class="sgvs mb-2">
+              <img th:src="@{/multimedia/sgv/salud.svg}" class="img-fluid" width="60px" alt="Salud">
+            </div>
+            <div class="textovalores fs-4">
+              <span th:text="#{salud.bienestar}"></span>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 mb-4 mi-img-valores">
+            <div class="sgvs mb-2">
+              <img th:src="@{/multimedia/sgv/check.svg}" class="img-fluid" width="60px" alt="Calidad">
+            </div>
+            <div class="textovalores fs-4">
+              <span th:text="#{calidad.excelencia}"></span>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 mb-4 mi-img-valores">
+            <div class="sgvs mb-2">
+              <img th:src="@{/multimedia/sgv/team.svg}" class="img-fluid" width="60px" alt="Equipo">
+            </div>
+            <div class="textovalores fs-4">
+              <span th:text="#{trabajo.equipo}"></span>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 mb-4 mi-img-valores">
+            <div class="sgvs mb-2">
+              <img th:src="@{/multimedia/sgv/checkperson.svg}" class="img-fluid" width="60px" alt="Profesionalismo">
+            </div>
+            <div class="textovalores fs-4">
+              <span th:text="#{profesionalismo}"></span>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 mb-4 mi-img-valores">
+            <div class="sgvs mb-2">
+              <img th:src="@{/multimedia/sgv/star.svg}" class="img-fluid" width="60px" alt="Atención al Cliente">
+            </div>
+            <div class="textovalores fs-4">
+              <span th:text="#{atención.cliente}"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="my-4">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 container-fluid text-center">
+              <h2 class="fs-2 fw-bold" th:text="#{sobre.nosotros}"></h2>
+              <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 d-none d-md-flex justify-content-center mb-2">
+              <div class="btn-group" role="group" aria-label="Button group">
+                <button type="button" class="btn btn-outline-dark fs-4" onclick="showDiv('uno')" th:text="#{misión}"></button>
+                <button type="button" class="btn btn-outline-dark fs-4" onclick="showDiv('dos')" th:text="#{visión}"></button>
+                <button type="button" class="btn btn-outline-dark fs-4" onclick="showDiv('tres')" th:text="#{compromiso}"></button>
+              </div>
+            </div>
+            <div class="col-12 d-flex d-md-none justify-content-center mb-2">
+              <div class="btn-group" role="group" aria-label="Button group">
+                <button type="button" class="btn btn-outline-dark fs-6" onclick="showDiv('uno')" th:text="#{misión}"></button>
+                <button type="button" class="btn btn-outline-dark fs-6" onclick="showDiv('dos')" th:text="#{visión}"></button>
+                <button type="button" class="btn btn-outline-dark fs-6" onclick="showDiv('tres')" th:text="#{compromiso}"></button>
+              </div>
+            </div>  
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="container-fluid fs-4">
+                <div class="mb-4"><span th:text="#{iron}"></span></div>
+                <div id="uno" class="box uno" style="display: none;">
+                  <span th:text="#{brindar}"></span>
+                </div>
+                <div id="dos" class="box dos" style="display: none;">
+                  <span th:text="#{reconocidos}"></span>
+                </div>
+                <div id="tres" class="box tres fs-4" style="display: none;">
+                  <span class="fw-bold" th:text="#{compromiso.excelencia}"></span><br>
+                  <span th:text="#{esforzamos}"></span><br><br>
+                  <span class="fw-bold" th:text="#{compromiso.experiencia}"></span><br>
+                  <span th:text="#{prioridad}"></span><br><br>
+                  <span class="fw-bold" th:text="#{compromiso.comunidad}"></span><br>
+                  <span th:text="#{creemos}"></span><br><br>
+                </div>
+              </div>  
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer th:insert="común/footer"></footer>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:lang="${#locale.language}">
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title th:text="#{ti.iron.contacto}"></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link th:href="@{/css-bootstrap/bootstrap.min.css}" rel="stylesheet">
+  <link th:href="@{/css/contacto.css}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Dekko&family=Dosis:wght@200&family=Edu+NSW+ACT+Foundation:wght@400;500&family=Exo:ital,wght@1,100;1,200&family=Patrick+Hand&family=Pixelify+Sans&family=Red+Hat+Display:wght@300&family=Source+Sans+3:wght@200;300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header th:insert="común/header"></header>
+    <main>
+        <div class="content">
+          <div class="parrafo">
+            <span class="fw-bold text-white mi-margen" th:text="#{contacto}"></span>
+          </div>
+        </div>
+        <div class="container-fluid bg-body-secondary">
+            <div class="row p-2">
+                <div class="col-lg-6 d-flex flex-column align-items-center justify-content-evenly">
+                    <div class="container-fluid text-center my-2">
+                      <span class="fs-2 fw-bold" th:text="#{encuentranos}"></span>
+                      <hr>
+                    </div>
+                    <div class="container-fluid my-2 fs-4">
+                        <div class="fw-bold" th:text="#{direccion}"></div>
+                        <div th:text="#{cra}"></div>
+                    </div>
+                    <div class="container-fluid my-2 fs-4">
+                        <div class="fw-bold" th:text="#{horario}"></div>
+                        <div th:text="#{lunavier}"></div>
+                        <div class="mx-4" th:text="#{cinco}"></div>
+                        <div th:text="#{sabadom}"></div>
+                        <div class="mx-4" th:text="#{ocho}"></div>
+                    </div>
+                    <div class="container-fluid my-2 fs-4">
+                        <div class="fw-bold" th:text="#{telefono.correo}"></div>
+                        <div th:text="#{numero.ironbody}"></div>
+                        <div th:text="#{correo.ironbody}"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 my-2 cont">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d704.4012415947218!2d-75.26719439929285!3d2.903866589542951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sco!4v1716707756161!5m2!1ses!2sco" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="shadow-lg"></iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer th:insert="común/footer"></footer>
+</body>
+</html>
