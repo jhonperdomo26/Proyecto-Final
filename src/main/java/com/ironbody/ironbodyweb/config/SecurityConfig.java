@@ -74,7 +74,7 @@ public class SecurityConfig {
                 .authorizeRequests(authorizeRequests ->
                         authorizeRequests
                                 .requestMatchers(
-                                        HttpMethod.GET, "/adminmenu", "/users", "/edit").hasRole("ADMIN")
+                                        HttpMethod.GET, "/adminmenu", "/edit").hasRole("ADMIN")
                                 .requestMatchers(
                                         HttpMethod.GET, "/", "/login", "/registro", "/home", "/inicio", "/clases", "/sobre_nosotros", "/contacto").permitAll()
                                 .requestMatchers(

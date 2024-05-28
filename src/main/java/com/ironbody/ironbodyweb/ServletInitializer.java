@@ -14,7 +14,7 @@ public class ServletInitializer extends SpringBootServletInitializer {
 	 * Configura la aplicación Spring Boot para la inicializacion del servlet.
 	 *
 	 * @param application Constructor de la aplicacion.
-	 * @return El constructor de la aplicación configurada.
+	 * @return El constructor de la aplicacion configurada.
 	 */
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
